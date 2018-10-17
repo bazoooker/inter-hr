@@ -1,0 +1,149 @@
+.sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	width: 100%;
+	height: 50px;
+	padding: 0 0;
+	opacity: 0;
+
+	background-color: #fff;
+	box-shadow: 0px 0px 25px 1px rgba(0,0,0,.25);
+	z-index: 9;
+
+	transition: $tr;
+
+	// change
+	transform: translateY(-101%);
+
+	// padding: 3.1rem 0 5.5rem 0;
+
+	.container {
+		position: relative;
+		@include flex-row(nowrap, space-between,center);
+		height: 100%; /*IE*/
+
+
+	}
+	// .logo {
+	// 	width: 100px;
+	// 	height: 40px;
+
+	// 	transform: translateX(-101%);
+	// 	transition: 200ms;
+	// 	transition-delay: 400ms;
+	// }
+
+	// .btn-burger {
+	// 	transform: translateX(101%);
+	// }
+	#progress {
+		position: absolute;
+	    bottom: 0px;
+	    left: 0;
+	    width: 0%;
+	    height: 2px;
+	    background-color: $color_main;
+	}
+}
+
+.sticky-header__inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	
+	.logo {
+		margin-right: auto;
+
+		img {
+		    width: 120px;
+			margin: 6px 0 6px 10px;
+		}
+	}
+
+	.btn_main {
+		padding: 0 30px;
+	    line-height: 30px;
+	    height: 30px;
+	    margin: 0 30px;
+	    &:hover {
+	    	text-decoration: none;
+	    }
+	}
+
+	.number {
+		color: #523d86;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 50px;
+    	text-decoration: none;
+	    &:hover {
+	    	opacity: .8;
+	    }
+	}
+
+	.btn-burger {
+		margin: 0 8px 0 auto;
+	}
+}
+
+.sticky-header_active {
+	transform: none;
+	// animation: stretch .25s ease-out;
+	opacity: 1;
+
+	.logo, .btn-burger {
+		transform: none;
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	.sticky-header {
+		display: block;
+
+
+	}
+}
+@media screen and (max-width: 768px) {
+	.sticky-header__inner {
+		.btn_main {
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 568px) {
+	.sticky-header__inner {
+		.logo {
+			img {
+			    width: 110px;
+			}
+		}
+		.number {
+			font-size: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 413px) {
+	.sticky-header__inner {
+		.logo {
+			margin-right: auto;
+
+			img {
+			    width: 95px;
+				margin: 4px 0 4px 8px;
+			}
+		}
+
+		.number {
+			color: #523d86;
+			font-size: 13px;
+			font-weight: bold;
+			line-height: 50px;
+		}
+	}
+}

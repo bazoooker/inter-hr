@@ -1,0 +1,190 @@
+body{
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+
+h1{
+	font-family: 'PT Serif', serif;
+	font-size: 30px;
+	font-weight: bold;
+	color:#000000;
+	margin-top: 0;
+	padding: 10px 0 0 0px;
+	}
+
+p{
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+
+a{color:#333333;}
+	a:hover{color:#007b9f;}
+	
+img {border: 0;}
+
+.qftext, .qftextarea{
+	clear:both;
+	margin-bottom:10px;
+	}
+	
+.qftext label, .qftextarea label, .qfsubmit label {
+	margin-right:2%;
+	margin-top:5px;
+	float:left;
+	display:block;
+	width:30%;
+	text-align:right;
+	}
+	
+.qftext input {
+	float:left;
+	display:block;
+	width:66%;
+	height: 25px;
+	padding:0 0 0 10px;
+	border:1px solid #d2d1ce;
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+	
+.qftextarea textarea {
+	float:left;
+	display:block;
+	width:66%;
+	height: 100px;
+	padding:0 0 0 10px;
+	border:1px solid #d2d1ce;
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+
+	// .butt{
+	// 	opacity: 1.0;
+	// 	font-family: 'PT Serif', serif;
+	// 	font-size: 18px;
+	// 	font-weight: normal;
+	// 	font-style: italic;
+	// 	text-decoration: none;
+	// 	width: 350px; 
+	// 	height:60px;
+	// 	margin:0 auto;
+	// 	color:#ffffff;
+	// 	background: url(/img/buttons/bigbutton.png) center center no-repeat;
+	// 	text-align:center;
+	// 	border:0px;
+	// 	cursor:hand;
+	// 	}
+	// 	.butt:hover{opacity:0.8;}
+		
+form table textarea{
+	padding:0 0 0 10px;
+	border:1px solid #d2d1ce;
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+
+form table input, form table select{
+	height: 25px;
+	padding:0 0 0 10px;
+	border:1px solid #d2d1ce;
+	font-family: 'PT Serif', serif;
+	font-size: 14px;
+	font-weight: normal;
+	color:#666666;
+	}
+
+.hr {
+	height:1px;
+	border-bottom:1px solid #b0b0b0;
+	margin: 10px 0;
+	}
+	
+.bigbutton, .butt {
+    display: inline-block;
+    margin: 0;
+    padding: 16px 35px;
+    background-image: -o-linear-gradient(top, #3BB7E5 0%, #1393CE 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3BB7E5), color-stop(100, #1393CE));
+    background-image: -webkit-linear-gradient(top, #3BB7E5 0%, #1393CE 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3BB7E5), to(#1393CE));
+    background-image: linear-gradient(to bottom, #3BB7E5 0%, #1393CE 100%);
+    border-radius: 26px;
+    -webkit-box-shadow: 0 3px 0px #045689;
+    box-shadow: 0 3px 0px #045689;
+    border: 1px solid #1aa0d8;
+	// display: block;
+	// opacity: 1.0;
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: none;
+	// width: 350px; 
+	// height:55px;
+	// margin:0 auto;
+	cursor: pointer;
+	color:#ffffff;
+	// background: url(/img/buttons/bigbutton.png) center center no-repeat;
+	// text-align:center;
+	// padding:25px 25px 0px 0px;
+	// border:0px;
+
+	&:hover {
+		color: #fff;
+		opacity: .85;
+	}
+	}
+
+.smallbutton{
+	display: block;
+	opacity: 1.0;
+	text-decoration: none;
+	width: 210px; 
+	height:33px;
+	margin:0 auto;
+	color:#007B9F;
+	background: url(/img/buttons/smallbutton.png) center center no-repeat;
+	text-align:center;
+	padding: 5px 0 0 0;
+	}
+
+	.front-headline{
+		font-family: 'PT Serif', serif;
+		font-size: 24px;
+		font-weight: normal;
+		color:#000000;
+		line-height:32px;
+		margin:30px 0 20px 0px;
+		}
+	.front-text{
+		font-family: 'PT Serif', serif;
+		font-size: 16px;
+		font-weight: normal;
+		color:#666666;
+		line-height:24px;
+		margin:0 0 0 0px;
+		}
+table.grid {border-collapse:collapse;border:none;width:100%;}                                                                                 
+table.grid tr td{padding:3px; border-bottom: solid #dddddd 1px;}
+table.grid tr td p {padding:0px;margin:0px;}
+table.grid tr.thead td{padding:3px; ; font-weight:bold;border-bottom:solid #523d86 3px; font-size:14px !important;}
+table.grid tr.thead td * {font-weight:bold; font-size:14px !important;}
+table.grid tr.noline td{padding:3px; border-bottom: 0px !important;}
+
+
+@media screen and (max-width: 992px) {
+	.bigbutton, .butt {
+		font-size: 15px;
+		padding: 8px 15px;
+	}
+}

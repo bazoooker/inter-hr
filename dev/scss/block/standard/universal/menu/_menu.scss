@@ -1,0 +1,188 @@
+.main-menu {
+	position: fixed;
+
+	top: 0;
+	
+	height: 100%;
+	min-height: 100vh;
+
+	background-color: #fff;
+	box-shadow: 0 0 35px 1px rgba(0,0,0,.2);
+	color: #fff;
+	padding-bottom: 50px;
+
+	// opacity: 0;
+	// z-index: -2;
+	z-index: 10;
+
+	transition: $tr;
+	.container {
+		@include flex-row(wrap, space-between, stretch);
+	}
+
+	&.main-menu_active {
+		transform: translateY(0);
+		// opacity: 1;
+	}
+
+	#searchform {
+		form {
+			text-align: center;
+			margin: 30px 0;
+		}
+	}
+}
+
+.main-menu_narrow-left {
+	left: 0;
+	right: auto;
+	width: 290px;
+	transform: translateX(-101%);
+}
+
+.main-menu_narrow-right {
+	right: 0;
+	left: auto;
+	width: 290px;
+	transform: translateX(101%);
+}
+
+.main-menu_full-screen {
+	width: 100%;
+	transform: translateY(-101%);
+}
+
+
+
+
+
+
+
+
+
+
+.main-menu__header {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 20px 20px 10px 20px;
+	
+
+	.logo {
+		display: block;
+		margin: 30px 0 30px 0;
+		img {
+			width: 100%;
+		}
+	}
+
+	.contacts {
+		margin: 30px 0 30px 0;
+		.phone {
+			overflow: hidden;
+			color: black;
+			margin: 0 0 15px 0;
+			.code{
+				float: left;
+			    top: 8px;
+			    margin: 0 18px 0;
+			    sup{ font-size: 18px; top: 8px; }
+			}
+			.number{
+				float: left;
+				font-size: 30px;
+			    font-weight: bold;
+			    color: #59458b;
+			}
+		}
+
+		.address, .mail {
+			color: #333333;
+		}
+	}
+	.super-main-btn {
+		display: block; 
+		margin: 0 0 15px 0;
+		img {
+			margin-top: 0;
+		}
+	}
+}
+
+.main-menu__nav {
+	background: #f5f5f5;
+    	padding: 10px 10px;
+	.menu {
+		display: block; //перезапись display: none основного меню в шапке сайта
+		list-style: none;
+		li {
+			padding-left: 0;
+			a {
+				display: block;
+				font-family: 'PT Serif', serif;
+			    font-size: 16px;
+			    font-weight: bold;
+			    color: #333333;
+			    text-transform: uppercase;
+			    text-decoration: none;
+			    padding: 5px 0;
+			    &:hover {}
+			    &:visited {}
+			}
+		}
+	}
+}
+
+.main-menu__btn-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+
+	transform: rotate(45deg);
+
+	transition: 300ms;
+	
+	&:after {
+		@include pseudo;
+
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 35px;
+		height: 1px;
+
+		background: lightgray;
+	}
+
+	&:before {
+		@include pseudo;
+
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%);
+
+		width: 1px;
+		height: 35px;
+
+		background: lightgray;
+	}
+
+	&:active {
+		border: 0;
+		outline: 0;
+	}
+
+	&:hover {
+		transform: rotate(135deg) scale(1.3);
+	}
+
+}
+
+
